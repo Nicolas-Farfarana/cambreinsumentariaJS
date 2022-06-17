@@ -1,0 +1,201 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Zen Antique Soft', serif;
+}
+body{
+    overflow-x: hidden;
+}
+@import "variable";
+@import "footer";
+@import "error404";
+/*-------------------------- LOGO -------------------------- */
+.logo{
+    height: 100px;
+    width: 200px;
+    margin: auto ;
+    display: block;
+}
+/*-------------------------- MENU --------------------------- */
+ul li:hover ul{
+    display: block;
+}
+/*----------------------------- MAIN ---------------------- */
+#carruselPrincipal{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+h2{
+    letter-spacing: 2px;
+    border-bottom-style: solid;
+    border-color: $colorPrincipal;
+    margin: 3rem 4rem 3rem 4rem;
+}
+
+h4{
+    margin: auto;
+    border-bottom-style: solid;
+    border-color: $colorPrincipal;
+    margin: 3rem 10rem 3rem 10rem;
+}
+.seccionPrincipalIndex {
+    padding-top: 20px;
+    padding-left: 20px;
+    ul{
+        list-style-type: none;
+    }
+    a{
+        text-decoration: none;
+        color: $colorFuente;
+    }
+}
+.quienesSomos{
+    padding-top: 5px;
+
+    p{
+        padding-left: 40px;
+    }
+}
+/* ------------------------- VER MAS -----------------------*/
+.verMas{
+    margin-top: 50px;
+}
+.verMasPrincipal{
+    justify-content: space-evenly;
+}
+@each $numero in 1,2,3 {
+    .masTop#{$numero} {
+        background-image:url(../media/images/vermas#{$numero}.jpg);
+        opacity: 0.5;
+        width: 25%;
+        height: 400px;
+        &:hover{
+        opacity: 1;
+    }
+    p{
+        color: white;
+        font-size: 45px;
+    }
+    .boton1{
+        text-align: center;
+        ;
+        }
+    }
+}
+/* ------------------- ESTILO SECCION PRODUCTOS---------------------*/
+.seccionProductos{
+    li{
+        text-align: center;
+        font-weight: bolder;
+        line-height: 3rem;
+        text-decoration: underline $colorPrincipal 2px;
+    }
+}
+
+/*----------------------------ESTILO CALZAS------------------------*/
+.calzas1{
+    justify-content: space-evenly;
+}
+
+/*------------------------------- MAIN CONTACTO-------------------------*/
+.mainContacto{
+    padding-left: 20px;
+    height: 100%;
+}
+/*-------------------------------- ESTILO TOPS -------------------------*/
+.top1{
+    h4{
+        text-align: center;
+    }
+    .card{
+        margin: auto;
+    }
+    img{
+        margin: auto;
+    }
+}
+
+/* ----------------------------- ESTILO CONJUNTO DEPORTIVOS ---------------*/
+
+.conjuntosDeportivos{
+    .card{
+        margin: auto;
+    }
+}
+/* ------------------------------ ESTILOS PRODUCTOS ------------------------*/
+#carouselTop{
+    width: 200px;
+    margin: auto;
+}
+#carouselMallas{
+    width: 200px;
+    margin: auto;
+}
+#carouselConjunto{
+    width: 200px;
+    margin: auto;
+}
+
+/*------------------------  ESTILO GUIA DE TALLA ---------------------*/
+.imagenTallas{
+    img{
+        width: 100%;
+    }
+}
+/*--------------------- estilos cartas -------------------*/
+.card-body{
+    text-align: center;
+    flex:none;
+}
+/* MEDIA QUERIES */
+
+/* ESCRITORIO */
+
+@media only screen and (min-width: 768px) {
+
+}
+
+/* TABLET */
+
+@media only screen and (max-width: 767px) and (min-width: 321px){
+
+@each $numero in 1,2,3 {
+    .masTop#{$numero} {
+        width: 300px;
+        height: 300px;
+        margin: 5px;
+        }
+    }
+    h4{
+        margin: 1.5rem 5rem 1.5rem 5rem;
+    }
+    html{
+        overflow-x: hidden;
+    }
+    footer{
+        img{
+            width: 18px;
+        }
+    }
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 320px) {
+    @each $numero in 1,2,3 {
+        .masTop#{$numero} {
+            margin: 5px;
+            width: 300px;
+            height: 300px;
+            }
+        }
+        footer{
+            img{
+                width: 18px;
+            }
+        }
+        }
