@@ -36,3 +36,5 @@ Cards("productosBikersEstampadas",productosBikersEstampadas);
 Cards("producto34Liso",producto34Liso);
 Cards("producto34Estampado",producto34Estampado);
 Cards("producto34Combinado",producto34Combinado);
+Cards("productosTopsLisos",productosTopsLisos);
+Cards("productosTopsEstampados",productosTopsEstampados);
