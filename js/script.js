@@ -31,10 +31,14 @@ function Cards (identificador, productos){
     }
     
 }
-Cards("productosBikersLisas",productosBikersLisas);
-Cards("productosBikersEstampadas",productosBikersEstampadas);
-Cards("producto34Liso",producto34Liso);
-Cards("producto34Estampado",producto34Estampado);
-Cards("producto34Combinado",producto34Combinado);
+Cards("productosMallasBikersLisas",productosMallasBikersLisas);
+Cards("productosMallasBikersEstampadas",productosMallasBikersEstampadas);
+Cards("productosMallas34Liso",productosMallas34Liso);
+Cards("productosMallas34Estampado",productosMallas34Estampado);
+Cards("productosMallas34Combinado",productosMallas34Combinado);
 Cards("productosTopsLisos",productosTopsLisos);
 Cards("productosTopsEstampados",productosTopsEstampados);
+Cards("productosMallasLisas",productosMallasLisas);
+Cards("productosMallasEstampadas",productosMallasEstampadas);
+Cards("productoSudadera",productoSudadera);
+Cards("productoPantalones",productoPantalones)

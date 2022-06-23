@@ -131,7 +131,7 @@ const productosTopsEstampados = [
         src: "./media/images/topestampado11.png",
     },
 ]
-const productosBikersLisas = [
+const productosMallasBikersLisas = [
     {
         id: 1,
         nombre: "Malla Biker Pink",
@@ -167,7 +167,7 @@ const productosBikersLisas = [
 
 ]
 
-const productosBikersEstampadas = [
+const productosMallasBikersEstampadas = [
     {
         id: 5,
         nombre: "Malla Biker Lunar",
@@ -234,7 +234,7 @@ const productosBikersEstampadas = [
     },
 ]
 
-const producto34Liso = [
+const productosMallas34Liso = [
     {
         id: 13,
         nombre: "Malla 3/4 Black",
@@ -261,7 +261,7 @@ const producto34Liso = [
     },
 ]
 
-const producto34Estampado = [
+const productosMallas34Estampado = [
     {
         id: 16,
         nombre: "Malla 3/4 Animal Print",
@@ -328,9 +328,9 @@ const producto34Estampado = [
     },
 ]
 
-const producto34Combinado = [
+const productosMallas34Combinado = [
     {
-        id: 23,
+        id: 24,
         nombre: "Malla 3/4 Combinada Summer",
         precio: 28,
         divisa: "€",
@@ -338,7 +338,7 @@ const producto34Combinado = [
         src: "./media/images/3-4combinada1.png",
     },
     {
-        id: 23,
+        id: 25,
         nombre: "Malla 3/4 Combinada Rainbow",
         precio: 28,
         divisa: "€",
@@ -346,7 +346,7 @@ const producto34Combinado = [
         src: "./media/images/3-4combinada2.png",
     },
     {
-        id: 23,
+        id: 26,
         nombre: "Malla 3/4 Combinada Algae",
         precio: 28,
         divisa: "€",
@@ -354,11 +354,255 @@ const producto34Combinado = [
         src: "./media/images/3-4combinada3.png",
     },
     {
-        id: 23,
+        id: 27,
         nombre: "Malla 3/4 Combinada Moon",
         precio: 28,
         divisa: "€",
         stock: 10,
         src: "./media/images/3-4combinada4.png",
+    },
+]
+
+const productosMallasLisas = [
+    {
+        id: 28,
+        nombre: "Malla Total Grey",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalisa1.png",
+    },
+    {
+        id: 29,
+        nombre: "Malla Total Blue ",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalisa2.png",
+    },
+    {
+        id: 30,
+        nombre: "Malla Total Light Blue",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalisa3.png",
+    },
+    {
+        id: 31,
+        nombre: "Malla Total Brown",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalisa4.png",
+    },
+    {
+        id: 32,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalisa5.png",
+    },
+]
+
+const productosMallasEstampadas = [
+    {
+        id: 33,
+        nombre: "Malla Flower",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada1.png",
+    },
+    {
+        id: 34,
+        nombre: "Malla Under",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada2.png",
+    },
+    {
+        id: 35,
+        nombre: "Malla Spring",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src:"./media/images/calzalargaestampada3.png",
+    },
+    {
+        id: 36,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada4.png",
+    },
+    {
+        id: 37,
+        nombre: "Malla Moon",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada5.png",
+    },
+    {
+        id: 38,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada6.png",
+    },
+    {
+        id: 39,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada7.png",
+    },
+    {
+        id: 40,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada8.png",
+    },
+    {
+        id: 41,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada9.png",
+    },
+    {
+        id: 42,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada10.png",
+    },
+    {
+        id: 43,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada11.png",
+    },
+    {
+        id: 44,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada12.png",
+    },
+    {
+        id: 45,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada13.png",
+    },
+    {
+        id: 46,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada14.png",
+    },
+    {
+        id: 47,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada15.png",
+    },
+    {
+        id: 47,
+        nombre: "Malla Total Pink",
+        precio: 30,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/calzalargaestampada16.png",
+    },
+
+]
+
+const productoSudadera = [
+    {
+        id: 48,
+        nombre: "Sudadera Total Caqui",
+        precio: 35,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/buzo1.png",
+    },
+    {
+        id: 49,
+        nombre: "Sudadera Estampada Ligth",
+        precio: 35,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/buzo2.png",
+    },
+    {
+        id:50,
+        nombre: "Sudadera Total Orange",
+        precio: 35,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/buzo3.png",
+    },
+    {
+        id: 51,
+        nombre: "Sudadera estampada Riel",
+        precio: 35,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/buzo4.png",
+    },
+]
+const productoPantalones = [
+    {
+        id: 52,
+        nombre: "Pantalon Total Caqui",
+        precio: 35,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/pantalones2.png",
+    },
+    {
+        id: 53,
+        nombre: "Pantalon Total Ligth",
+        precio: 35,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/pantalones3.png",
+    },
+    {
+        id: 54,
+        nombre: "Pantalon Total Grey",
+        precio: 35,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/pantalones4.png",
+    },
+    {
+        id: 55,
+        nombre: "Pantalon Total Rouge",
+        precio: 35,
+        divisa: "€",
+        stock: 10,
+        src: "./media/images/pantalones5.png",
     },
 ]
