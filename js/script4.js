@@ -1,25 +1,27 @@
-//document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 
     const listaDeProductosBikers = [] ;
-    const DOMbikers = document.getElementById('bikers')
+    const DOMbikers = document.getElementById('mallas')
 
-    function Producto (id, nombreProducto, precioProducto, stockProducto, descuentoProducto, imgValor){
-        this.id = id ;
-        this.nombre = nombreProducto ;
-        this.precio = parseFloat(precioProducto) ;
-        this.stock = stockProducto ;
-        this.descuento = descuentoProducto ;
-        this.img = imgValor;
-        this.venta = function (cantidadComprada){
-            this.stock-= cantidadComprada;
-            console.log ("El stock de  " + this.nombre  + " " + "es igual a: " + this.stock  )
-        }
-        this.calcularPrecio = function(precio, descuento){
-            precioTotalVenta += parseFloat(cantidadComprada * precio * descuento);
-        }
-        this.stockInsuficiente = function(){
-            alert("No tenemos stock suficiente de ese producto, puedes comprar " + this.stock + " unidades")
+    class Producto{
+        constructor (id, nombreProducto, precioProducto, stockProducto, descuentoProducto, imgValor){
+            this.id = id ;
+            this.nombre = nombreProducto ;
+            this.precio = parseFloat(precioProducto) ;
+            this.stock = stockProducto ;
+            this.descuento = descuentoProducto ;
+            this.img = imgValor;
+            this.venta = function (cantidadComprada){
+                this.stock-= cantidadComprada;
+                console.log ("El stock de  " + this.nombre  + " " + "es igual a: " + this.stock  )
+            }
+            this.calcularPrecio = function(precio, descuento){
+                precioTotalVenta += parseFloat(cantidadComprada * precio * descuento);
+            }
+            this.stockInsuficiente = function(){
+                alert("No tenemos stock suficiente de ese producto, puedes comprar " + this.stock + " unidades")
+            }
         }
     }
 
@@ -30,6 +32,7 @@
 
     listaDeProductosBikers.push(productoBikerA,productoBikerB,productoBikerC, productoBikerD)
 
+    console.log(listaDeProductosBikers)
     // Funcion para mostrar productos
 
 function mostrarProductos(){
@@ -67,13 +70,12 @@ function mostrarProductos(){
         DOMbikers.appendChild(card);
 
     });
-    DOM
 }
 
 mostrarProductos();
 
 
-
+})
 
 
 

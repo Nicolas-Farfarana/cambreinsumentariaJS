@@ -17,7 +17,14 @@
         rel="stylesheet">
     <link rel="icon" href="https://img.icons8.com/ios/50/000000/xbox-a.png" />
     <title>CAMBRE indumentaria</title>
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="./js/obj.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
 </head>
 
 <body>
@@ -51,8 +58,7 @@
         </div>
     </header>
     <main class="principal">
-        <h1><a href="./index.html"><img src="./media/images/logoCambrePrincipal.png" alt="logo"
-                    class="logo"></a></h1>
+        <h1><a href="./index.html"><img src="./media/images/logoCambrePrincipal.png" alt="logo" class="logo"></a></h1>
         <!------------------------------- CARRUSEL ---------------------------------------------->
         <div>
             <div id="carruselPrincipal" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -126,10 +132,26 @@
                 <div class="col-xs-12 col-sm-12 col-md-4 masTop3">
                     <div class="boton1">
                         <p>CONJUNTOS</p>
-                        <a href="index.html#conjuntosDeportivos"><button type="button"
-                                class="btn btn-outline-light">VER MAS</button></a>
+                        <a href="index.html#conjuntosDeportivos"><button type="button" class="btn btn-outline-light">VER
+                                MAS</button></a>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-------------------------------- CARRITO ------------------------------------>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling &
+            backdrop</button>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>Try scrolling the rest of the page to see this option in action.</p>
             </div>
         </div>
         <!-------------------------------- SECCION PRODUCTOS -------------------------->
@@ -141,12 +163,8 @@
                         <h2>Tops</h2>
                         <div class="seccionProductos">
                             <ul>
-                                <a href="./pages/tops.html#lisos">
-                                    <li>Lisos</li>
-                                </a>
-                                <a href="./pages/tops.html#estampados">
-                                    <li>Estampados</li>
-                                </a>
+                                <li><a href="./pages/tops.html#lisos">Lisos</a></li>
+                                <li><a href="./pages/tops.html#estampados">Estampados</a></li>
                             </ul>
                         </div>
                         <div>
@@ -181,15 +199,9 @@
                         <h2>Mallas</h2>
                         <div class="seccionProductos">
                             <ul>
-                                <a href="./pages/calzas.html#biker">
-                                    <li>Bikers</li>
-                                </a>
-                                <a href="./pages/calzas.html#3/4">
-                                    <li>3/4</li>
-                                </a>
-                                <a href="./pages/calzas.html#largas">
-                                    <li>Largas</li>
-                                </a>
+                                <li><a href="./pages/calzas.html#biker">Bikers</a></li>
+                                <li><a href="./pages/calzas.html#3/4">3/4</a></li>
+                                <li><a href="./pages/calzas.html#largas">Largas</a></li>
                             </ul>
                         </div>
                         <div>
@@ -225,12 +237,8 @@
                         <h2>Conjuntos Deportivos</h2>
                         <div class="seccionProductos">
                             <ul>
-                                <a href="./pages/conjuntosdeportivos.html#sudaderas">
-                                    <li>Sudaderas</li>
-                                </a>
-                                <a href="./pages/conjuntosdeportivos.html#pantalones">
-                                    <li>Pantalones</li>
-                                </a>
+                                <li><a href="./pages/conjuntosdeportivos.html#sudaderas">Sudaderas</a></li>
+                                <li><a href="./pages/conjuntosdeportivos.html#pantalones">Pantalones</a></li>
                             </ul>
                         </div>
                         <div>
@@ -266,13 +274,13 @@
         <!------------------------------- CARDS TOPS    --------------------------------------->
 
         <section>
-            <div class="conteiner"  id="tops">
+            <div class="conteiner" id="tops">
                 <h2>Tops</h2>
             </div>
             <div class="conteiner" id="lisos">
                 <h4>Lisos</h4>
             </div>
-            <div class= "top1">
+            <div class="top1">
                 <div class="row row-cols-1 row-cols-md-4 g-4" id="productosTopsLisos">
 
                 </div>
@@ -280,19 +288,21 @@
             <div class="conteiner" id="estampados">
                 <h4>Estampados</h4>
             </div>
-            <div class= "top1">
+            <div class="top1">
                 <div class="row row-cols-1 row-cols-md-4 g-4" id="productosTopsEstampados">
+                </div>
+            </div>
         </section>
 
         <!------------------------------- CARDS CALZAS  --------------------------------------->
         <!-- biker -->
         <section>
-                <!--MALLAS BIKERS-->
-            <div class="conteiner" id="mallas" >
+            <!--MALLAS BIKERS-->
+            <div class="conteiner" id="mallas">
                 <h2>Mallas</h2>
                 <h3>Mallas Bikers</h3>
                 <h4>Lisas</h4>
-                <div class= "top1">
+                <div class="top1">
                     <div class="row row-cols-1 row-cols-md-4 g-4" id="productosMallasBikersLisas">
 
                     </div>
@@ -302,11 +312,11 @@
                 <h4>Estampadas</h4>
                 <div class="top1">
                     <div class="row row-cols-1 row-cols-md-4 g-4" id="productosMallasBikersEstampadas">
-                        
+
                     </div>
                 </div>
             </div>
-                <!--MALLAS 3/4-->
+            <!--MALLAS 3/4-->
             <div class="conteiner" id="3/4">
                 <h3>Mallas 3/4</h3>
             </div>
@@ -314,11 +324,11 @@
                 <h4>Lisas</h4>
                 <div class="top1">
                     <div class="row row-cols-1 row-cols-md-4 g-4" id="productosMallas34Liso">
-                        
+
                     </div>
                 </div>
             </div>
-                <div class="conteiner">
+            <div class="conteiner">
                 <h4>Estampadas</h4>
             </div>
             <div class="top1">
@@ -353,7 +363,7 @@
                 </div>
             </div>
         </section>
-    
+
 
         <!----------------------------- CARDS CONJUNTOS DEPORTIVOS -------------------------->
         <div class="conteiner" id="conjuntosDeportivos">
@@ -373,8 +383,8 @@
             <div class="row row-cols-1 row-cols-md-4 g-4" id="productoPantalones">
             </div>
         </div>
-    
-    
+
+
     </main>
 
     <!---------------------------------------------- FOOTER ---------------------------------->
@@ -416,11 +426,7 @@
             </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script src="./js/obj.js"></script>
-    <script src="./js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>

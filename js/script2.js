@@ -1,22 +1,23 @@
+class Producto{
+    constructor(nombreValor, stockValor, precioValor, descuentoValor){
+    
+    this.nombre = nombreValor;
+    
+    this.stock = stockValor;
+    
+    this.precio = precioValor;
+    
+    this.descuento = descuentoValor;
+    
+    this.venta = function(cantidadComprada){
+    
+    this.stock -= cantidadComprada
+    
+    console.log("El stock remanente es de: " + this.stock + " " + this.nombre);
+    
+    }
 
-function Producto (nombreValor, stockValor, precioValor, descuentoValor){
-
-this.nombre = nombreValor;
-
-this.stock = stockValor;
-
-this.precio = precioValor;
-
-this.descuento = descuentoValor;
-
-this.venta = function(cantidadComprada){
-
-this.stock -= cantidadComprada
-
-console.log("El stock remanente es de: " + this.stock + " " + this.nombre);
-
-}
-
+    }
 }
 
 
