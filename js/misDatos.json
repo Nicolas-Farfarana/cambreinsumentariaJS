@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "nombre": "Top Liso Black",
+        "precio": 20,
+        "divisa": "€",
+        "stock": 10,
+        "src": "./media/images/lisonegro.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Top Liso Pink ",
+        "precio": 20,
+        "divisa": "€",
+        "stock": 10,
+        "src": "./media/images/lisorosa1.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Top Liso Fluor",
+        "precio": 20,
+        "divisa": "€",
+        "stock": 10,
+        "src": "./media/images/lisoverde.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Top Liso Grey",
+        "precio": 20,
+        "divisa": "€",
+        "stock": 10,
+        "src": "./media/images/topliso.png"
+    }
+]

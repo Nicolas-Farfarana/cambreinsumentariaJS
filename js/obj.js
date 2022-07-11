@@ -33,6 +33,8 @@ const productosTopsLisos = [
     },
     
 ]
+//let misDatos = JSON.stringify(productosTopsLisos)
+//console.log(misDatos)
 const productosTopsEstampados = [
     {
         id: 5,
