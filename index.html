@@ -22,8 +22,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/obj.js"></script>
     <script src="./js/script.js"></script>
+    <!-- <script src="./js/script copy.js"></script>
+    <script src="./js/obj copy.js"></script> -->
 </head>
 
 <body>
@@ -46,11 +50,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="./pages/guiatallas.html" target="_blank">Guia de tallas</a>
                             </li>
+                            <li class="nav-item">
+                                <img src="./media/images/compra.png" style="float:right" class="btnsComprar" alt="">
+                            </li>
                         </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                            <button type="button" class="btn btn-outline-dark" type="submit">Buscar</button>
-                        </form>
                     </div>
                 </div>
             </nav>
@@ -138,21 +141,7 @@
             </div>
         </div>
 
-        <!-------------------------------- CARRITO ------------------------------------>
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling &
-            backdrop</button>
 
-        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-            aria-labelledby="offcanvasWithBothOptionsLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <p>Try scrolling the rest of the page to see this option in action.</p>
-            </div>
-        </div>
         <!-------------------------------- SECCION PRODUCTOS -------------------------->
         <section id="fondoPrincipal" class="seccionPrincipalIndex">
             <div class="conteiner">
@@ -269,9 +258,7 @@
                 </div>
             </div>
         </section>
-
         <!------------------------------- CARDS TOPS    --------------------------------------->
-
         <section>
             <div class="conteiner" id="tops">
                 <h2>Tops</h2>
@@ -281,7 +268,6 @@
             </div>
             <div class="top1">
                 <div class="row row-cols-1 row-cols-md-4 g-4" id="productosTopsLisos">
-
                 </div>
             </div>
             <div class="conteiner" id="estampados">
@@ -292,7 +278,6 @@
                 </div>
             </div>
         </section>
-
         <!------------------------------- CARDS CALZAS  --------------------------------------->
         <!-- biker -->
         <section>
@@ -303,7 +288,6 @@
                 <h4>Lisas</h4>
                 <div class="top1">
                     <div class="row row-cols-1 row-cols-md-4 g-4" id="productosMallasBikersLisas">
-
                     </div>
                 </div>
             </div>
@@ -311,7 +295,6 @@
                 <h4>Estampadas</h4>
                 <div class="top1">
                     <div class="row row-cols-1 row-cols-md-4 g-4" id="productosMallasBikersEstampadas">
-
                     </div>
                 </div>
             </div>
@@ -323,7 +306,6 @@
                 <h4>Lisas</h4>
                 <div class="top1">
                     <div class="row row-cols-1 row-cols-md-4 g-4" id="productosMallas34Liso">
-
                     </div>
                 </div>
             </div>
@@ -332,7 +314,6 @@
             </div>
             <div class="top1">
                 <div class="row row-cols-1 row-cols-md-4 g-4" id="productosMallas34Estampado">
-
                 </div>
             </div>
             <div class="conteiner">
@@ -340,7 +321,6 @@
             </div>
             <div class="top1">
                 <div class="row row-cols-1 row-cols-md-4 g-4" id="productosMallas34Combinado">
-
                 </div>
             </div>
             <!--MALLAS LARGAS-->
@@ -362,8 +342,6 @@
                 </div>
             </div>
         </section>
-
-
         <!----------------------------- CARDS CONJUNTOS DEPORTIVOS -------------------------->
         <div class="conteiner" id="conjuntosDeportivos">
             <h2>Conjuntos deportivos</h2>
@@ -382,50 +360,117 @@
             <div class="row row-cols-1 row-cols-md-4 g-4" id="productoPantalones">
             </div>
         </div>
-
-
-    </main>
-
-    <!---------------------------------------------- FOOTER ---------------------------------->
-
-    <footer class="text-center text-white" style="background-color: #f1f1f1;">
-        <!-- Grid container -->
-        <div class="container pt-4">
-            <!-- Section: Social media -->
-            <section class="mb-4">
-                <!-- Facebook -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="https://www.facebook.com/Cambre-indumentaria-Spain-103457665268026" role="button"
-                    data-mdb-ripple-color="dark" target="_blank"><img src="./media/images/facebook.png" alt=""></a>
-
-                <!-- Instagram -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="https://www.instagram.com/cambreindumentariaspain/" role="button" data-mdb-ripple-color="dark"
-                    target="_blank"><img src="./media/images/instagram.png" alt=""></a>
-
-                <!-- Email -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="mailto:malejandravizcaya@gmail.com?Subject=Interesado%20en%20Activa" role="button"
-                    data-mdb-ripple-color="dark"><img src="./media/images/email.png" alt=""></a>
-
-                <!-- Whats app -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="https://api.whatsapp.com/send?phone=+34625385372" role="button" data-mdb-ripple-color="dark"
-                    target="_blank"><img src="./media/images/whatsapp.png" alt=""></a>
-
-                <!-- Maps -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="https://www.google.com/maps/place/C.+de+Mar%C3%ADa+de+Guzm%C3%A1n,+3,+28003+Madrid/@40.4444829,-3.7055737,17z/data=!3m1!4b1!4m5!3m4!1s0xd422857e65c5e45:0x33425c65563deb68!8m2!3d40.4444788!4d-3.703385"
-                    role="button" data-mdb-ripple-color="dark" target="_blank"><img src="./media/images/maps.png"
-                        alt=""></a>
-            </section>
-            <!-- Copyright -->
-            <div class="text-center text-dark p-2" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2021 Copyright: Farfarana Nicolas
+        <!------------------------------------------PUSHBAR CARRITO   ---------------------------->
+        <!-- ELEMENTOS DEL CARRITO -->
+        <section class="shopping-cart">
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close cerrarModal" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body modalCarrito">
+                    <div class="container">
+                        <h1 class="text-center">SU COMPRA</h1>
+                        <hr>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="shopping-cart-header">
+                                    <h6>Producto</h6>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="shopping-cart-header">
+                                    <h6 class="">Precio</h6>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="shopping-cart-header">
+                                    <h6>Cantidad</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ? START SHOPPING CART ITEMS -->
+                        <div class="shopping-cart-items shoppingCartItemsContainer">
+                        </div>
+                        <!-- ? END SHOPPING CART ITEMS -->
+                    </div>
+                    <!-- TOTAL -->
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="mb-0 text-start">Total</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="ml-4 mb-0 carritoTotal">0€</p>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-outline-dark ml-auto justify-content-md-end comprarBoton"
+                                type="button" data-toggle="modal" data-target="#comprarModal">Comprar</button>
+                        </div>
+                    </div>
+                    <!-- START MODAL COMPRA -->
+                    <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Pronto recibirá su pedido</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-    </footer>
+        </section>
+        <!---------------------------------------------- FOOTER ---------------------------------->
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <footer class="text-center text-white" style="background-color: #f1f1f1;">
+            <!-- Grid container -->
+            <div class="container pt-4">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                        href="https://www.facebook.com/Cambre-indumentaria-Spain-103457665268026" role="button"
+                        data-mdb-ripple-color="dark" target="_blank"><img src="./media/images/facebook.png" alt=""></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                        href="https://www.instagram.com/cambreindumentariaspain/" role="button"
+                        data-mdb-ripple-color="dark" target="_blank"><img src="./media/images/instagram.png" alt=""></a>
+
+                    <!-- Email -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                        href="mailto:malejandravizcaya@gmail.com?Subject=Interesado%20en%20Activa" role="button"
+                        data-mdb-ripple-color="dark"><img src="./media/images/email.png" alt=""></a>
+
+                    <!-- Whats app -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                        href="https://api.whatsapp.com/send?phone=+34625385372" role="button"
+                        data-mdb-ripple-color="dark" target="_blank"><img src="./media/images/whatsapp.png" alt=""></a>
+
+                    <!-- Maps -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                        href="https://www.google.com/maps/place/C.+de+Mar%C3%ADa+de+Guzm%C3%A1n,+3,+28003+Madrid/@40.4444829,-3.7055737,17z/data=!3m1!4b1!4m5!3m4!1s0xd422857e65c5e45:0x33425c65563deb68!8m2!3d40.4444788!4d-3.703385"
+                        role="button" data-mdb-ripple-color="dark" target="_blank"><img src="./media/images/maps.png"
+                            alt=""></a>
+                </section>
+                <!-- Copyright -->
+                <div class="text-center text-dark p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2021 Copyright: Farfarana Nicolas
+                </div>
+        </footer>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>

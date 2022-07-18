@@ -1,4 +1,11 @@
+fetch('misDatos.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
 document.addEventListener("DOMContentLoaded", () => {
+    
+  
+
   // CREAR PRODUCTOS
 
   class Producto {
@@ -21,8 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.venta = function (cantidadComprada) {
         this.stock -= cantidadComprada;
         console.log(
-          "El stock de  " + this.nombre + " " + "es igual a: " + this.stock
-        );
+            "El stock de  " + this.nombre + " " + "es igual a: " + this.stock );
       };
       this.calcularPrecio = function (precio, descuento) {
         precioTotalVenta += parseFloat(cantidadComprada * precio * descuento);
@@ -36,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     }
   }
+
+  
 
   //  FUNCION MOSTRAR PRODUCTOS
   function Cards(identificador, productos) {
@@ -57,6 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
                                             <div class="card-body">
                                             <h5 class="card-title precio">${producto.precio}  ${producto.divisa}</h5>
                                             <p class="card-text nombre">${producto.nombre}</p>
+                                            <select class="form-select form-select-sm" aria-label=".form-select-sm example" >
+                                            <option selected>Seleccione la talla</option>
+                                            <option value="xs">XS</option>
+                                            <option value="s">S</option>
+                                            <option value="m">M</option>
+                                            <option value="l">L</option>
+                                            <option value="xl">XL</option>
+                                            </select>
                                             <br>
                                             <button class="btn btn-outline-dark btnsComprar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
                                             aria-controls="offcanvasScrolling">Comprar</button>
@@ -79,54 +95,56 @@ document.addEventListener("DOMContentLoaded", () => {
   Cards("productoSudadera", productoSudadera);
   Cards("productoPantalones", productoPantalones);
 
-  // Evento para añadir un producto al carrito de la compra
 
+  // Evento para añadir un producto al carrito de la compra
+  
   let carrito = {};
 
-  const addProductoAlCarritoBtn = document.querySelectorAll(".btnsComprar");
-  addProductoAlCarritoBtn.forEach((addProductoBtn) => {
-    addProductoBtn.addEventListener("click", addProductoClicked);
-  });
+  const addProductoAlCarritoBtn = document.querySelectorAll('.btnsComprar')
+  addProductoAlCarritoBtn.forEach(addProductoBtn => {
+    addProductoBtn.addEventListener('click', addProductoClicked)
+  })
+  
+  const botonComprar = document.querySelector('.comprarBoton')
+  botonComprar.addEventListener('click', comprarBotonClicked);
 
-  const botonComprar = document.querySelector(".comprarBoton");
-  botonComprar.addEventListener("click", comprarBotonClicked);
+  const modalCarrito = document.querySelector('.shoppingCartItemsContainer');
 
-  const modalCarrito = document.querySelector(".shoppingCartItemsContainer");
 
-  function addProductoClicked(event) {
-    const button = event.target;
-    const item = button.closest(".card");
-    const itemNombre = item.querySelector(".nombre").textContent;
-    const itemPrecio = item.querySelector(".precio").textContent;
-    const itemImg = item.querySelector(".img").src;
-
+  function addProductoClicked(event){
+    
+    const button = event.target ;
+    const item = button.closest('.card')
+    const itemNombre = item.querySelector('.nombre').textContent;
+    const itemPrecio = item.querySelector('.precio').textContent;
+    const itemImg = item.querySelector('.img').src;
+    
     addItemAlCarrito(itemNombre, itemPrecio, itemImg);
+
   }
 
-  function addItemAlCarrito(itemNombre, itemPrecio, itemImg) {
-    const nombreProducto =
-      modalCarrito.getElementsByClassName("carritoItemNombre");
+  function addItemAlCarrito(itemNombre, itemPrecio, itemImg){
 
-    for (let i = 0; i < nombreProducto.length; i++) {
-      if (nombreProducto[i].innerText === itemNombre) {
-        const cantidadProducto = nombreProducto[
-          i
-        ].parentElement.parentElement.parentElement.querySelector(
-          ".cantidadItemCompra"
-        );
-        cantidadProducto.value++;
+    const nombreProducto = modalCarrito.getElementsByClassName('carritoItemNombre')
+    
+    for (let i = 0 ; i< nombreProducto.length ; i ++){
+      if(nombreProducto[i].innerText === itemNombre){
+        const cantidadProducto = nombreProducto[i].parentElement.parentElement.parentElement.querySelector('.cantidadItemCompra');
+        cantidadProducto.value++ ;
         totalCarritoCompra();
         return;
       }
+
     }
 
-    const itemCarrito = document.createElement("div");
+
+    const itemCarrito = document.createElement('div');
     itemCarrito.innerHTML = `
     <div class="row itemCompraCarrito">
           <div class="col-6">
               <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
                   <img src=${itemImg} class="shopping-cart-image">
-                  <h7 class="shopping-cart-item-title carritoItemNombre ml-3 mb-0">${itemNombre}</h7>
+                  <h7 class="shopping-cart-item-title carritoItemNombre text-truncate ml-3 mb-0">${itemNombre}</h7>
               </div>
           </div>
           <div class="col-3">
@@ -144,64 +162,66 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
       </div>`;
 
-    modalCarrito.append(itemCarrito);
+      modalCarrito.append(itemCarrito);
 
-    itemCarrito
-      .querySelector(".buttonDelete")
-      .addEventListener("click", borrarItemCarrito);
-    itemCarrito.querySelector(".cantidadItemCompra");
-    addEventListener("change", cantidadCompraCarrito);
-
-    totalCarritoCompra();
+      itemCarrito
+      .querySelector('.buttonDelete')
+      .addEventListener('click',borrarItemCarrito);
+      itemCarrito
+      .querySelector('.cantidadItemCompra')
+      addEventListener('change',cantidadCompraCarrito)
+      
+      totalCarritoCompra();
   }
 
-  function totalCarritoCompra() {
+  function totalCarritoCompra(){
     let total = 0;
-    const totalCompra = document.querySelector(".carritoTotal");
-    const itemsCompraCarrito = document.querySelectorAll(".itemCompraCarrito");
-    itemsCompraCarrito.forEach((itemCompraCarrito) => {
-      const compraPrecioItemCarritoElemento =
-        itemCompraCarrito.querySelector(".precioItemCarrito");
-      const compraPrecioItemCarrito = Number(
-        compraPrecioItemCarritoElemento.textContent.replace("€", "")
-      );
-      const cantidadItemCompraElemento = itemCompraCarrito.querySelector(
-        ".cantidadItemCompra"
-      );
-      const cantidadItemCompra = Number(cantidadItemCompraElemento.value);
+    const totalCompra = document.querySelector('.carritoTotal');
+    const itemsCompraCarrito =document.querySelectorAll('.itemCompraCarrito');
+    itemsCompraCarrito.forEach(itemCompraCarrito => {
+      const compraPrecioItemCarritoElemento = itemCompraCarrito.querySelector('.precioItemCarrito');
+      const compraPrecioItemCarrito = Number( compraPrecioItemCarritoElemento.textContent.replace('€',''));
+      const cantidadItemCompraElemento = itemCompraCarrito.querySelector('.cantidadItemCompra');
+      const cantidadItemCompra = Number (cantidadItemCompraElemento.value) ; 
       total = total + compraPrecioItemCarrito * cantidadItemCompra;
-    });
-    totalCompra.innerHTML = `${total.toFixed(2)} €`;
+
+    })
+    totalCompra.innerHTML= `${total.toFixed(2)} €`
   }
 
-  function borrarItemCarrito(event) {
-    const botonBorrarItem = event.target;
-    botonBorrarItem.closest(".itemCompraCarrito").remove();
+  function borrarItemCarrito(event){
+    const botonBorrarItem = event.target
+    botonBorrarItem.closest('.itemCompraCarrito').remove();
     totalCarritoCompra();
   }
-
-  function cantidadCompraCarrito(event) {
-    const botonCantidadCarrito = event.target;
-    if (botonCantidadCarrito.value <= 0) {
+      
+  function cantidadCompraCarrito(event){
+    const botonCantidadCarrito = event.target
+    if (botonCantidadCarrito.value <= 0){
       botonCantidadCarrito.value = 1;
-    }
-    totalCarritoCompra();
+      }
+      totalCarritoCompra();
   }
 
-  function comprarBotonClicked() {
-    if (modalCarrito.innerHTML !== "") {
+  function comprarBotonClicked (){
+    if (modalCarrito != ''){
       Swal.fire({
-        title: "Muchas gracias por tu compra",
+        title: 'Muchas gracias por tu compra',
         showClass: {
-          popup: "animate__animated animate__fadeInDown",
+          popup: 'animate__animated animate__fadeInDown'
         },
         hideClass: {
-          popup: "animate__animated animate__fadeOutUp",
-        },
-      });
-    }
-    modalCarrito.innerHTML = "";
-    totalCarritoCompra();
-    ç;
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+    })
   }
-});
+    modalCarrito.innerHTML = '';
+    totalCarritoCompra();
+  }
+  
+    
+})
+
+
+
+

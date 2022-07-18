@@ -9,9 +9,16 @@ html {
 body {
   overflow-x: hidden; }
 
-/* COLORES */
-/* SCSS Gradient */
-/* MEDIDAS */
+
+/* CARRITO */
+.shopping-cart-image {
+  width: 100px;
+  height: 100px;
+}
+.cantidadItemCompra{
+  width: 40px;
+}
+
 /* ------------------------- ESTILO FOOTER----------------------*/
 footer {
   margin-top: 10rem; }

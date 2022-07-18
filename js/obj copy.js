@@ -1,5 +1,6 @@
+const productos =[
 
-const productosTopsLisos = [
+
     {
         id: 1,
         nombre: "Top Liso Black",
@@ -10,7 +11,7 @@ const productosTopsLisos = [
     },
     {
         id: 2,
-        nombre: "Top Liso Pink",
+        nombre: "Top Liso Pink ",
         precio: 20,
         divisa: "€",
         stock: 10,
@@ -33,8 +34,7 @@ const productosTopsLisos = [
         src: "./media/images/topliso.png" ,
     },
     
-]
-const productosTopsEstampados = [
+
     {
         id: 5,
         nombre: "Top Sara",
@@ -131,8 +131,8 @@ const productosTopsEstampados = [
         stock: 10,
         src: "./media/images/topestampado11.png",
     },
-]
-const productosMallasBikersLisas = [
+
+
     {
         id: 1,
         nombre: "Malla Biker Pink",
@@ -166,9 +166,9 @@ const productosMallasBikersLisas = [
         src: "./media/images/bikerliso4.png",
     },
 
-]
 
-const productosMallasBikersEstampadas = [
+
+
     {
         id: 5,
         nombre: "Malla Biker Lunar",
@@ -233,9 +233,9 @@ const productosMallasBikersEstampadas = [
         stock: 10,
         src: "./media/images/bikerestampada8.png",
     },
-]
 
-const productosMallas34Liso = [
+
+
     {
         id: 13,
         nombre: "Malla 3/4 Black",
@@ -260,9 +260,9 @@ const productosMallas34Liso = [
         stock: 10,
         src: "./media/images/calzalisa3-4-3.png",
     },
-]
 
-const productosMallas34Estampado = [
+
+
     {
         id: 16,
         nombre: "Malla 3/4 Animal Print",
@@ -327,9 +327,9 @@ const productosMallas34Estampado = [
         stock: 10,
         src: "./media/images/3-4estampada8.png",
     },
-]
 
-const productosMallas34Combinado = [
+
+
     {
         id: 24,
         nombre: "Malla 3/4 Combinada Summer",
@@ -362,9 +362,9 @@ const productosMallas34Combinado = [
         stock: 10,
         src: "./media/images/3-4combinada4.png",
     },
-]
 
-const productosMallasLisas = [
+
+
     {
         id: 28,
         nombre: "Malla Total Grey",
@@ -405,9 +405,9 @@ const productosMallasLisas = [
         stock: 10,
         src: "./media/images/calzalisa5.png",
     },
-]
 
-const productosMallasEstampadas = [
+
+
     {
         id: 33,
         nombre: "Malla Flower",
@@ -537,9 +537,9 @@ const productosMallasEstampadas = [
         src: "./media/images/calzalargaestampada16.png",
     },
 
-]
 
-const productoSudadera = [
+
+
     {
         id: 48,
         nombre: "Sudadera Total Caqui",
@@ -572,8 +572,8 @@ const productoSudadera = [
         stock: 10,
         src: "./media/images/buzo4.png",
     },
-]
-const productoPantalones = [
+
+
     {
         id: 52,
         nombre: "Pantalon Total Caqui",
@@ -606,4 +606,6 @@ const productoPantalones = [
         stock: 10,
         src: "./media/images/pantalones5.png",
     },
+
 ]
+
