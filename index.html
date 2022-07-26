@@ -54,6 +54,13 @@
                                 <img src="./media/images/compra.png" style="float:right" class="btnsComprar" alt="">
                             </li>
                         </ul>
+                        <div class="d-flex justify-content-end">
+                            <form class="d-flex " role="search">
+                                <input class="form-control me-2 buscador" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-dark botonBuscador" type="submit">Search</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -404,8 +411,10 @@
                             <p class="ml-4 mb-0 carritoTotal">0€</p>
                         </div>
                         <div class="col-4">
-                            <button class="btn btn-outline-dark ml-auto justify-content-md-end comprarBoton"
-                                type="button" data-toggle="modal" data-target="#comprarModal">Comprar</button>
+
+                                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    Comprar
+                                </button>
                         </div>
                     </div>
                     <!-- START MODAL COMPRA -->
@@ -431,6 +440,72 @@
                 </div>
             </div>
         </section>
+        <!----------------------------------- MODAL DIRECCION ENVIO   ---------------------------->
+        <!-- Button trigger modal -->
+       
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">DATOS DE ENVIO</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputName" class="form-label">Nombres</label>
+                                <input type="text" class="form-control" id="inputName">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputSurname" class="form-label">Apellidos</label>
+                                <input type="tel" class="form-control" id="inputSurname">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputEmail4" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Ejemplo@email.com">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Direccion</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputCity" class="form-label">Ciudad</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState" class="form-label">Provincia</label>
+                                <input type="text" class="form-control" id="inputProvincia">
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="inputZip" class="form-label">CP</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Estoy de acuerdo en recibir publicidad y descuentos exclusivos
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-outline-dark ml-auto justify-content-md-end comprarBoton"
+                                type="button" data-toggle="modal" data-target="#comprarModal">Comprar</button> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
         <!---------------------------------------------- FOOTER ---------------------------------->
 
         <footer class="text-center text-white" style="background-color: #f1f1f1;">

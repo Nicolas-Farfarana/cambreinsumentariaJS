@@ -202,6 +202,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     modalCarrito.innerHTML = "";
     totalCarritoCompra();
-    ç;
+  
   }
+
+  const buscador = document.querySelector('.buscador');
+  const botonBuscador = document.querySelector('.botonBuscador');
+
+  const filtrar = () => {
+
+    const texto = formulario.value.tolowerCase();
+    for(let producto of productos){
+      let nombre = producto.nombre.tolowerCase();
+    }
+  }
+  botonBuscador.addEventListener('click',filtrar);
+
+
 });
